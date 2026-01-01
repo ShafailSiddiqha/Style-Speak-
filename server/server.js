@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const uploadRoutes = require("./routes/upload");
+
 const app = express();
 
 app.use(cors());
@@ -15,6 +17,8 @@ mongoose
     console.error("❌ MongoDB connection error", err);
     process.exit(1);
   });
+
+app.use("/chat", uploadRoutes);
 
 app.get("/", (req, res) => {
   res.send("Style Speak Server is running 🚀");
