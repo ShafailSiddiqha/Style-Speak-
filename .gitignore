@@ -1,5 +1,16 @@
-node_modules
+# Node
+node_modules/
+
+# Python
+__pycache__/
+venv/
+
+# Env files
 .env
-venv
-__pycache__
-uploads
+
+# Uploads
+server/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
